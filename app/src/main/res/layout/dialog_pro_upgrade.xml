@@ -35,8 +35,10 @@
 
             <ImageView
                 android:id="@+id/btnClosePro"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Close Pro Dialog"
+                android:padding="12dp"
                 android:src="@android:drawable/ic_menu_close_clear_cancel"
                 app:tint="@color/text_muted" />
         </LinearLayout>

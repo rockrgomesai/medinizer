@@ -138,6 +138,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 SoundEffects.playDoubleDoseWarning()
+                binding.root.announceForAccessibility("Warning: Potential Double-Dose. You already took ${med.name} $elapsedFormatted ago.")
                 if (profile.voiceEnabled) {
                     speechAssistant.speak("Warning. You already took your ${med.name} dose $elapsedFormatted ago.")
                 }
@@ -168,6 +169,7 @@ class MainActivity : AppCompatActivity() {
 
         dialogView.findViewById<MaterialButton>(R.id.btnCancelDoubleDose).setOnClickListener {
             dialog.dismiss()
+            binding.root.announceForAccessibility("Safe choice. Dose logging cancelled.")
             Toast.makeText(this, "Safe choice! Dose logging cancelled.", Toast.LENGTH_SHORT).show()
         }
 
@@ -194,6 +196,7 @@ class MainActivity : AppCompatActivity() {
 
         dbHelper.logDose(log)
         SoundEffects.playSuccessChime()
+        binding.root.announceForAccessibility("Verified Taken: ${med.name} ${med.dosage} confirmed.")
 
         if (profile.voiceEnabled) {
             speechAssistant.speak("Confirmed. ${med.name} ${med.dosage} recorded.")
