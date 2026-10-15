@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MedVault</string>
+    <string name="app_tagline">Smart Medication &amp; Pill Safety Assistant</string>
+    <string name="did_i_take_it">Did I Take It?</string>
+    <string name="double_dose_alert_title">⚠️ SAFETY WARNING: Potential Double Dose</string>
+</resources>
